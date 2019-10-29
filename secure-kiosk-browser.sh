@@ -18,6 +18,7 @@ while ! [[ $PROMPT = "Loop" ]]; do # eternally run the script
         done
 
     killall "Google Chrome"
+    # rm -rf ~/Downloads
 
     done
 
