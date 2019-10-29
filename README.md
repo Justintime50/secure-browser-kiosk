@@ -1,4 +1,4 @@
-# secure-kiosk-browser
+# Secure Browser Kiosk
 A simple app that opens and closes Chrome in incognito mode asking if the user needs more time after a timeout.
 
 ## Usage

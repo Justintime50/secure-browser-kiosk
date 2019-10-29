@@ -1,3 +1,5 @@
+#!/bin/bash
+
 PROMPT="button returned:Yes"
 
 while ! [[ $PROMPT = "Loop" ]]; do # eternally run the script
