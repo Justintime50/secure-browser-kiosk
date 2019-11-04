@@ -1,15 +1,17 @@
 #!/bin/bash
 
+## PLAYING WITH SCREENSAVER OPTIONS HERE, DON'T USE THIS SRIPT IN PROD ##
+
 PROMPT="button returned:Yes"
 
 while ! [[ $PROMPT = "Loop" ]]; do # eternally run the script
 
     PROMPT="button returned:Yes"
-    sleep 2
+    sleep 5
     open -a /Applications/Google\ Chrome.app --args --incognito
 
     SCREENSAVER="pgrep ScreenSaverEngine"
-    sleep 10 # timeout clock in seconds
+    sleep 300 # timeout clock in seconds
 
     while [[ ! -z $SCREENSAVER ]]; do
 
@@ -18,7 +20,7 @@ while ! [[ $PROMPT = "Loop" ]]; do # eternally run the script
         done
 
     killall "Google Chrome"
-    # rm -rf ~/Downloads
+    rm -rf ~/Downloads
 
     done
 
