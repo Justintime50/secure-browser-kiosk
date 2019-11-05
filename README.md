@@ -1,9 +1,5 @@
 # Secure Browser Kiosk
-A simple macOS app that opens and closes Chrome in incognito mode and removing downloads after prompting if the user needs more time.
-
-The script launches Chrome in incognito mode, waits a period of time, then prompts the user if they need more time.
-
-If the user doesn't need anymore time, the browser will close and delete the contents of the downloads folder of the logged in user and restart in incognito mode.
+A macOS script that opens and closes Chrome in incognito mode and removes the user's downloads after prompting if the user needs more time and they answer no.
 
 ## Setup
 1. Ensure the scripts are executable.
