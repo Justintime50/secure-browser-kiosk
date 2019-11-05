@@ -1,6 +1,7 @@
 #!/bin/bash
 
-## PLAYING WITH SCREENSAVER OPTIONS HERE, DON'T USE THIS SRIPT IN PROD ##
+# This script launches Chrome in incognito mode, waits a period of time, then prompts the user if they need more time.
+# If the user doesn't need anymore time, the browser will close and remove downloads and restart in incognito mode.
 
 PROMPT="button returned:Yes"
 
@@ -10,18 +11,12 @@ while ! [[ $PROMPT = "Loop" ]]; do # eternally run the script
     sleep 5
     open -a /Applications/Google\ Chrome.app --args --incognito
 
-    SCREENSAVER="pgrep ScreenSaverEngine"
-    sleep 300 # timeout clock in seconds
-
-    while [[ ! -z $SCREENSAVER ]]; do
-
-        while ! [[ $PROMPT = "button returned:No" ]]; do
+        while [[ $PROMPT = "button returned:Yes" ]]; do
+            sleep 300 # timeout clock in seconds
             PROMPT="$(osascript -e 'display dialog "Do you need more time? Selecting No will restart Chrome." buttons {"Yes", "No"} with icon stop')"
         done
 
     killall "Google Chrome"
     rm -rf ~/Downloads
 
-    done
-
-done # end the eternal loop since it can't be escaped with anything but a yes or not prompt
+done # end the eternal loop since it can't be escaped with anything but a yes or no prompt
