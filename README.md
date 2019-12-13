@@ -1,4 +1,8 @@
 # Secure Browser Kiosk
+
+[![Build Status](https://travis-ci.org/Justintime50/secure-browser-kiosk.svg?branch=master)](https://travis-ci.org/Justintime50/secure-browser-kiosk)
+[![MIT Licence](https://badges.frapsoft.com/os/mit/mit.svg?v=103)](https://opensource.org/licenses/mit-license.php)
+
 A macOS script that opens and closes Chrome in incognito mode and removes the user's downloads after prompting if the user needs more time and they answer no.
 
 ## Setup
