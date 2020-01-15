@@ -2,7 +2,7 @@
 
 # Secure Browser Kiosk
 
-Restart Chrome in incognito mode with a timer prompt.
+Restart Chrome in incognito mode by prompting the user if they need more time.
 
 [![Build Status](https://travis-ci.org/Justintime50/secure-browser-kiosk.svg?branch=master)](https://travis-ci.org/Justintime50/secure-browser-kiosk)
 [![MIT Licence](https://badges.frapsoft.com/os/mit/mit.svg?v=103)](https://opensource.org/licenses/mit-license.php)
