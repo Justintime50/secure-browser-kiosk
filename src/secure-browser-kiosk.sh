@@ -1,11 +1,17 @@
 #!/bin/bash
 
-# This script launches Chrome in incognito mode, waits a period of time, then prompts the user if they need more time.
-# If the user doesn't need anymore time, the browser will close and remove downloads and restart in incognito mode.
+# Secure Browser Kiosk
+#
+# This script launches Chrome in incognito mode, 
+# waits a period of time, then prompts the user 
+# if they need more time. If the user doesn't need 
+# anymore time, the browser will close and remove 
+# downloads and restart in incognito mode.
 
 PROMPT="button returned:Yes"
 
-while ! [[ $PROMPT = "Loop" ]]; do # eternally run the script
+# Eternally run the script until the process is explicitly killed
+while ! [[ $PROMPT = "Loop" ]]; do
 
     PROMPT="button returned:Yes"
     sleep 5
@@ -19,4 +25,4 @@ while ! [[ $PROMPT = "Loop" ]]; do # eternally run the script
     killall "Google Chrome"
     rm -rf "$HOME"/Downloads/*
 
-done # end the eternal loop since it can't be escaped with anything but a yes or no prompt
+done

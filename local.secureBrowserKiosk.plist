@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-    <dict>
+	<dict>
 		<key>Label</key>
 		<string>local.secureBrowserKiosk.plist</string>
 		<key>Program</key>
-		<string>/Users/jhammond/git/secure-browser-kiosk/secure-browser-kiosk.sh</string>
-        <key>RunAtLoad</key>
+		<string>/path/to/secure-browser-kiosk.sh</string>
+		<key>RunAtLoad</key>
 		<true/>
 		<key>StandardErrorPath</key>
-		<string>/Users/jhammond/git/secure-browser-kiosk/logs/log.err</string>
+		<string>/path/to/secure-browser-kiosk/logs/log.err</string>
 		<key>StandardOutPath</key>
-		<string>/Users/jhammond/git/secure-browser-kiosk/logs/log.out</string>
+		<string>/path/to/secure-browser-kiosk/logs/log.out</string>
 	</dict>
 </plist>
