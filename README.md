@@ -7,15 +7,21 @@ Restart Chrome in incognito mode by prompting the user if they need more time.
 [![Build Status](https://travis-ci.org/Justintime50/secure-browser-kiosk.svg?branch=master)](https://travis-ci.org/Justintime50/secure-browser-kiosk)
 [![Licence](https://img.shields.io/github/license/justintime50/secure-browser-kiosk)](LICENSE)
 
-<img src="assets/showcase.png">
+<img src="assets/showcase.png" alt="Showcase">
 
 </div>
-
-**NOTE:** Project is no longer maintained and has been archived.
 
 Secure Browser Kiosk is a macOS script that opens and closes Chrome in incognito mode and removes the user's downloads after prompting if the user needs more time (after 5 minutes of use) and they answer no.
 
 ## Install
+
+```bash
+# Setup the tap
+brew tap justintime50/formulas
+
+# Install the tool
+brew install secure-browser-kiosk
+```
 
 To ensure the script can run uninterrupted, we'll need to do a few things first:
 
@@ -29,10 +35,12 @@ Ensure that all screen savers and timeouts for logout on your computer are turne
 
 Either run the script as standalone or copy and load the Launch Agent (recommended).
 
+Pass an optional seconds argument to override the default 300 (5 minutes) timeout.
+
 ### Standalone
 
 ```bash
-./secure-browser-kiosk.sh
+secure-browser-kiosk 600
 ```
 
 ### Launch Agent (Recommended)
@@ -43,7 +51,7 @@ Loading Secure Browser Kiosk as a Launch Agent will hide any terminal actually r
 
 ```bash
 # Copy the plist to the Launch Agent directory
-cp local.secureBrowserKiosk.plist ~/Library/LaunchAgents
+cp src/local.secureBrowserKiosk.plist ~/Library/LaunchAgents
 
 # use `load/unload` to add/remove the script as a Launch Agent
 launchctl load ~/Library/LaunchAgents/local.secureBrowserKiosk.plist

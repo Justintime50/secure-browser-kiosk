@@ -5,7 +5,7 @@
 		<key>Label</key>
 		<string>local.secureBrowserKiosk.plist</string>
 		<key>Program</key>
-		<string>/path/to/secure-browser-kiosk.sh</string>
+		<string>secure-browser-kiosk</string>
 		<key>RunAtLoad</key>
 		<true/>
 		<key>StandardErrorPath</key>
