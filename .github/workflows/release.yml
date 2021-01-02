@@ -15,6 +15,6 @@ jobs:
         owner_email: justinpaulhammond@gmail.com
         repo: secure-browser-kiosk
         bin_install: '"src/secure-browser-kiosk.sh" => "secure-browser-kiosk"'
-        homebrew_tap: 'https://github.com/Justintime50/homebrew-formulas'
+        homebrew_tap: 'homebrew-formulas'
         homebrew_formula_folder: formula
         github_token: ${{ secrets.HOMEBREW_TAP_TOKEN }}
