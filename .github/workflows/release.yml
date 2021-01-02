@@ -9,7 +9,7 @@ jobs:
     name: Release my shell script to Homebrew
     steps:
     - name: Release my shell script to Homebrew
-      uses: Justintime50/shell-releaser@v0.1.0
+      uses: Justintime50/shell-releaser@v0.1.1
       with:
         owner: Justintime50
         owner_email: justinpaulhammond@gmail.com
