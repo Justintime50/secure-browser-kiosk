@@ -1,0 +1,20 @@
+on:
+  push:
+    tags:
+      - '*'
+
+jobs:
+  shell-releaser:
+    runs-on: ubuntu-latest
+    name: Release my shell script to Homebrew
+    steps:
+    - name: Release my shell script to Homebrew
+      uses: Justintime50/shell-releaser@v0.1.0
+      with:
+       owner: Justintime50
+       owner_email: justinpaulhammond@gmail.com
+       repo: secure-browser-kiosk
+       bin_install: "src/secure-browser-kiosk.sh" => "secure-browser-kiosk"
+       homebrew_tap: 'https://github.com/Justintime50/homebrew-formulas'
+       homebrew_formula_folder: formula
+       github_token: ${{ secrets.HOMEBREW_TAP_TOKEN }}
