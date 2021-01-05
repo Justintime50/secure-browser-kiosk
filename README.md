@@ -4,7 +4,7 @@
 
 Restart Chrome in incognito mode by prompting the user if they need more time.
 
-[![Build Status](https://travis-ci.org/Justintime50/secure-browser-kiosk.svg?branch=master)](https://travis-ci.org/Justintime50/secure-browser-kiosk)
+[![Build](https://github.com/Justintime50/secure-browser-kiosk/workflows/build/badge.svg)](https://github.com/Justintime50/secure-browser-kiosk/actions)
 [![Licence](https://img.shields.io/github/license/justintime50/secure-browser-kiosk)](LICENSE)
 
 <img src="assets/showcase.png" alt="Showcase">

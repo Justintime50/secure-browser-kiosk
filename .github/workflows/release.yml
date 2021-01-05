@@ -4,17 +4,17 @@ on:
       - '*'
 
 jobs:
-  shell-releaser:
+  homebrew-releaser:
     runs-on: ubuntu-latest
-    name: Release my shell script to Homebrew
+    name: homebrew-releaser
     steps:
-    - name: Release my shell script to Homebrew
-      uses: Justintime50/shell-releaser@v0.1.1
+    - name: Release my project to my Homebrew tap
+      uses: Justintime50/homebrew-releaser@v0.2.0
       with:
         owner: Justintime50
         owner_email: justinpaulhammond@gmail.com
         repo: secure-browser-kiosk
-        bin_install: '"src/secure-browser-kiosk.sh" => "secure-browser-kiosk"'
+        install: "bin.install \"src/secure-browser-kiosk.sh\" => \"secure-browser-kiosk\""
         homebrew_tap: 'homebrew-formulas'
         homebrew_formula_folder: formula
         github_token: ${{ secrets.HOMEBREW_TAP_TOKEN }}

@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## v1.1.1 (2021-01-05)
+
+* Switching from Travis to GitHub Actions
+* Using `homebrew-releaser` for automated releasing
+
 ## v1.1.0 (2020-10-06)
 
 * Refactored code to use functions
@@ -10,7 +15,6 @@
 ## v1.0.0 (2020-09-16)
 
 * Code cleanup
-* Archived project due to not using it anymore
 
 ## v0.2.0 (2020)
 
