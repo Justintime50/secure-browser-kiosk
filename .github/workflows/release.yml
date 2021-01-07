@@ -1,20 +1,20 @@
 on:
   push:
     tags:
-      - '*'
+      - "*"
 
 jobs:
   homebrew-releaser:
     runs-on: ubuntu-latest
     name: homebrew-releaser
     steps:
-    - name: Release my project to my Homebrew tap
-      uses: Justintime50/homebrew-releaser@v0.2.3
-      with:
-        owner: Justintime50
-        owner_email: justinpaulhammond@gmail.com
-        repo: secure-browser-kiosk
-        install: "bin.install \"src/secure-browser-kiosk.sh\" => \"secure-browser-kiosk\""
-        homebrew_tap: 'homebrew-formulas'
-        homebrew_formula_folder: formula
-        github_token: ${{ secrets.HOMEBREW_TAP_TOKEN }}
+      - name: Release my project to my Homebrew tap
+        uses: Justintime50/homebrew-releaser@v0.3.0
+        with:
+          owner: Justintime50
+          owner_email: justinpaulhammond@gmail.com
+          repo: secure-browser-kiosk
+          install: 'bin.install "src/secure-browser-kiosk.sh" => "secure-browser-kiosk"'
+          homebrew_tap: homebrew-formulas
+          homebrew_formula_folder: formula
+          github_token: ${{ secrets.HOMEBREW_TAP_TOKEN }}
